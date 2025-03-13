@@ -67,7 +67,7 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `marketing`: a landing page [Next.js](https://nextjs.org/)
+- `design-pickle`: a landing page [Next.js](https://nextjs.org/)
 - `docs`: storybook document for `@repo/ui`
 - `@repo/ui`: a stub React component library (🚀 powered by **shadcn/ui**)
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)

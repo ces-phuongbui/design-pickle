@@ -186,7 +186,7 @@ importers:
         specifier: ^5
         version: 5.6.3
 
-  apps/marketing:
+  apps/design-pickle:
     dependencies:
       '@repo/ui':
         specifier: workspace:*

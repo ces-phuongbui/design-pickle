@@ -17,34 +17,13 @@ import { Testimonials } from "@repo/ui/components/Testimonials";
 import { ThemeProvider } from "@repo/ui/components/theme-provider";
 import "../index.css";
 
-const client = strapi({
-  baseURL: process.env.STRAPI_URL || "",
-  auth: process.env.STRAPI_TOKEN,
-});
-
 export default async function Page() {
-  const aboutQuery = client.single("about");
-  const heroQuery = client.single("hero");
-
-  const [aboutResult, heroResult] = await Promise.all([
-    aboutQuery.find(),
-    heroQuery.find(),
-  ]);
-
-  const about = aboutResult.data;
-  const hero = heroResult.data;
-
   return (
     <>
       <ThemeProvider>
         <Navbar />
-        <Hero
-          headline={hero.headline}
-          excerpt={hero.excerpt}
-          links={hero.links}
-        />
+
         <Sponsors />
-        <About title={about.title} description={about.description} />
         <HowItWorks />
         <Features />
         <Services />
