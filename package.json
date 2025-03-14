@@ -9,7 +9,8 @@
     "storybook": "turbo run storybook --filter=docs",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "ui": "pnpm --filter @repo/ui ui"
+    "ui": "pnpm --filter @repo/ui ui",
+    "seed": "cd apps/headless-cms && npm run strapi import -- -f ./seed-data.tar.gz --force"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
