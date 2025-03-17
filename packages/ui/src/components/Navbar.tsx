@@ -7,18 +7,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuContent,
-  NavigationMenuLink,
 } from "./ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Button, buttonVariants } from "./ui/button";
+import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
 import { StrapiImage } from "./Media";
 import { ListItem } from "./ListItem";
@@ -29,7 +20,6 @@ export const Navbar = ({ navBar }: { navBar: any }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { logo, navItems, cta } = navBar;
-  console.log("🚀 ~ Navbar ~ cta:", cta);
 
   useEffect(() => {
     setIsMounted(true);

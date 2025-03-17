@@ -16,6 +16,11 @@
       "type": "component",
       "repeatable": false,
       "component": "layout.nav-bar"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.footer"
     }
   }
 }

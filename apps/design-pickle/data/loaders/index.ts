@@ -20,6 +20,19 @@ export async function getGlobalPageData(): Promise<any> {
           cta: true,
         },
       },
+      footer: {
+        populate: {
+          footerItems: {
+            populate: {
+              items: {
+                populate: "*",
+              },
+            },
+          },
+          socialLinks: true,
+          legalLinks: true,
+        },
+      },
     },
   });
   return globalPage;

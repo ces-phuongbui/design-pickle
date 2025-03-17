@@ -50,6 +50,19 @@ export interface ElementsMenuItem extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutFooter extends Struct.ComponentSchema {
+  collectionName: "components_layout_footers";
+  info: {
+    description: "";
+    displayName: "Footer";
+  };
+  attributes: {
+    footerItems: Schema.Attribute.Component<"elements.menu-category", true>;
+    legalLinks: Schema.Attribute.Component<"elements.link", true>;
+    socialLinks: Schema.Attribute.Component<"elements.link", true>;
+  };
+}
+
 export interface LayoutNavBar extends Struct.ComponentSchema {
   collectionName: "components_layout_nav_bars";
   info: {
@@ -132,6 +145,7 @@ declare module "@strapi/strapi" {
       "elements.link": ElementsLink;
       "elements.menu-category": ElementsMenuCategory;
       "elements.menu-item": ElementsMenuItem;
+      "layout.footer": LayoutFooter;
       "layout.nav-bar": LayoutNavBar;
       "shared.media": SharedMedia;
       "shared.quote": SharedQuote;

@@ -1,3 +1,4 @@
+import { Footer } from "@repo/ui/components/Footer";
 import { Navbar } from "@repo/ui/components/Navbar";
 import { ThemeProvider } from "@repo/ui/components/theme-provider";
 import "@repo/ui/globals.css";
@@ -19,7 +20,7 @@ export default async function RootLayout({
 }) {
   const data = await getGlobalPageData();
 
-  const { navBar } = data.data;
+  const { navBar, footer } = data.data;
 
   return (
     <html lang="en">
@@ -27,6 +28,7 @@ export default async function RootLayout({
         <ThemeProvider>
           <Navbar navBar={navBar} />
           {children}
+          <Footer footer={footer} />
         </ThemeProvider>
       </body>
     </html>
