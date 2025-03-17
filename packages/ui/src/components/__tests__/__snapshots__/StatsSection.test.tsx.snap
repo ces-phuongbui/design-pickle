@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsSection renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="bg-black py-16 md:py-24"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <div
+        class="mx-auto mb-12 max-w-3xl text-center"
+      >
+        <h2
+          class="mb-4 text-3xl font-bold text-white md:text-4xl"
+        >
+          Our Impact
+        </h2>
+        <p
+          class="text-gray-400"
+        >
+          See what we've achieved together
+        </p>
+      </div>
+      <div
+        class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      >
+        <div
+          class="flex flex-col items-center space-y-2 rounded-lg bg-zinc-900 p-6 text-center text-white"
+          data-testid="stat-card"
+        >
+          <div
+            class="text-3xl font-bold md:text-4xl lg:text-5xl"
+          >
+            20k+
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <div
+              class="text-base text-gray-200 md:text-lg font-bold"
+            >
+              Active Users
+            </div>
+            <div
+              class="text-sm text-gray-400"
+            >
+              and growing
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-2 rounded-lg bg-zinc-900 p-6 text-center text-white"
+          data-testid="stat-card"
+        >
+          <div
+            class="text-3xl font-bold md:text-4xl lg:text-5xl"
+          >
+            1M+
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <div
+              class="text-base text-gray-200 md:text-lg font-bold"
+            >
+              Downloads
+            </div>
+            <div
+              class="text-sm text-gray-400"
+            >
+              across platforms
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-2 rounded-lg bg-zinc-900 p-6 text-center text-white"
+          data-testid="stat-card"
+        >
+          <div
+            class="text-3xl font-bold md:text-4xl lg:text-5xl"
+          >
+            99.9%
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <div
+              class="text-base text-gray-200 md:text-lg font-bold"
+            >
+              Uptime
+            </div>
+            <div
+              class="text-sm text-gray-400"
+            >
+              reliability
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-2 rounded-lg bg-zinc-900 p-6 text-center text-white"
+          data-testid="stat-card"
+        >
+          <div
+            class="text-3xl font-bold md:text-4xl lg:text-5xl"
+          >
+            24/7
+          </div>
+          <div
+            class="space-y-1"
+          >
+            <div
+              class="text-base text-gray-200 md:text-lg font-bold"
+            >
+              Support
+            </div>
+            <div
+              class="text-sm text-gray-400"
+            >
+              always available
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoCarousel renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center bg-transparent p-4 rounded-md space-x-3 test-class"
+  >
+    <div
+      class="relative w-8 h-8"
+    >
+      <img
+        alt="Test Logo logo"
+        class="object-contain"
+        src="https://example.com/logo.png"
+      />
+    </div>
+    <span
+      class="text-white text-lg font-medium"
+    >
+      Test Logo
+    </span>
+  </div>
+</div>
+`;

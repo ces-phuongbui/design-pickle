@@ -46,6 +46,7 @@
     "@strapi/client": "^1.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.5.2",
     "lucide-react": "catalog:",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
@@ -60,6 +61,7 @@
       "./src/hooks/*.ts",
       "./src/hooks/*.tsx"
     ],
+    "./types/*": "./src/types/*.ts",
     "./components/*": "./src/components/*.tsx"
   }
 }

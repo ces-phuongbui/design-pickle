@@ -37,3 +37,36 @@ export async function getGlobalPageData(): Promise<any> {
   });
   return globalPage;
 }
+
+export async function getGraphicPageData(): Promise<any> {
+  const graphicPage = await client.single("graphic-design").find({
+    populate: {
+      blocks: {
+        on: {
+          "section.introduce-header": {
+            populate: "*",
+          },
+          "section.social-carousel": {
+            populate: {
+              bannerImage: { fields: ["url", "alternativeText", "name"] },
+              logos: {
+                populate: {
+                  image: {
+                    fields: ["url", "alternativeText", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "section.features": {
+            populate: "*",
+          },
+          "section.start": {
+            populate: "*",
+          },
+        },
+      },
+    },
+  });
+  return graphicPage;
+}

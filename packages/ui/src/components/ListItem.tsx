@@ -1,7 +1,7 @@
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 import React from "react";
 import { cn } from "../lib/utils";
-import { StrapiImage } from "./Media";
+import { StrapiImage } from "./StrapiImage";
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   title: string;

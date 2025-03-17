@@ -50,6 +50,19 @@ export interface ElementsMenuItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSocialLogo extends Struct.ComponentSchema {
+  collectionName: "components_elements_social_logos";
+  info: {
+    description: "";
+    displayName: "socialLogo";
+    icon: "twitter";
+  };
+  attributes: {
+    image: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: "components_layout_footers";
   info: {
@@ -73,6 +86,115 @@ export interface LayoutNavBar extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<"elements.link", true>;
     logo: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
     navItems: Schema.Attribute.Component<"elements.menu-item", true>;
+  };
+}
+
+export interface SectionFeatures extends Struct.ComponentSchema {
+  collectionName: "components_section_features";
+  info: {
+    displayName: "features";
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<"shared.card-feature", true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionIntroduceHeader extends Struct.ComponentSchema {
+  collectionName: "components_section_introduce_headers";
+  info: {
+    displayName: "introduce-header";
+    icon: "message";
+  };
+  attributes: {
+    button: Schema.Attribute.Component<"shared.button", false>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionSocialCarousel extends Struct.ComponentSchema {
+  collectionName: "components_section_social_carousels";
+  info: {
+    description: "";
+    displayName: "SocialCarousel";
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    bannerImage: Schema.Attribute.Media<"images">;
+    logos: Schema.Attribute.Component<"elements.social-logo", true>;
+  };
+}
+
+export interface SectionStart extends Struct.ComponentSchema {
+  collectionName: "components_section_starts";
+  info: {
+    description: "";
+    displayName: "Stat";
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<"shared.card-stat", true>;
+    subTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: "components_shared_buttons";
+  info: {
+    description: "";
+    displayName: "button";
+    icon: "cursor";
+  };
+  attributes: {
+    color: Schema.Attribute.String;
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      ["default", "destructive", "secondary", "outline", "ghost", "link"]
+    >;
+  };
+}
+
+export interface SharedCardFeature extends Struct.ComponentSchema {
+  collectionName: "components_shared_card_features";
+  info: {
+    description: "";
+    displayName: "card-feature";
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<"images">;
+    cta: Schema.Attribute.Component<"shared.button", true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCardStat extends Struct.ComponentSchema {
+  collectionName: "components_shared_card_stats";
+  info: {
+    description: "";
+    displayName: "card-stat";
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    subLabel: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeatures extends Struct.ComponentSchema {
+  collectionName: "components_shared_features";
+  info: {
+    description: "";
+    displayName: "features";
+    icon: "bulletList";
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<"shared.card-feature", true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -145,8 +267,17 @@ declare module "@strapi/strapi" {
       "elements.link": ElementsLink;
       "elements.menu-category": ElementsMenuCategory;
       "elements.menu-item": ElementsMenuItem;
+      "elements.social-logo": ElementsSocialLogo;
       "layout.footer": LayoutFooter;
       "layout.nav-bar": LayoutNavBar;
+      "section.features": SectionFeatures;
+      "section.introduce-header": SectionIntroduceHeader;
+      "section.social-carousel": SectionSocialCarousel;
+      "section.start": SectionStart;
+      "shared.button": SharedButton;
+      "shared.card-feature": SharedCardFeature;
+      "shared.card-stat": SharedCardStat;
+      "shared.features": SharedFeatures;
       "shared.media": SharedMedia;
       "shared.quote": SharedQuote;
       "shared.rich-text": SharedRichText;

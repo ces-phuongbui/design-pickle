@@ -58,6 +58,61 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
 
+  apps/design-pickle:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@strapi/client':
+        specifier: ^1.0.1
+        version: 1.0.1
+      next:
+        specifier: 15.2.1
+        version: 15.2.1(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: catalog:react18
+        version: 18.3.1
+      react-dom:
+        specifier: catalog:react18
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: 15.2.1
+        version: 15.2.1
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@types/eslint':
+        specifier: 'catalog:'
+        version: 8.56.2
+      '@types/node':
+        specifier: 'catalog:'
+        version: 20.11.6
+      '@types/react':
+        specifier: catalog:react18
+        version: 18.3.11
+      '@types/react-dom':
+        specifier: catalog:react18
+        version: 18.3.1
+      autoprefixer:
+        specifier: ^10
+        version: 10.4.19(postcss@8.4.38)
+      eslint:
+        specifier: 'catalog:'
+        version: 8.57.0
+      postcss:
+        specifier: ^8
+        version: 8.4.38
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 3.4.13
+      typescript:
+        specifier: 'catalog:'
+        version: 5.6.3
+
   apps/docs:
     dependencies:
       '@repo/ui':
@@ -186,61 +241,6 @@ importers:
         specifier: ^5
         version: 5.6.3
 
-  apps/design-pickle:
-    dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@strapi/client':
-        specifier: ^1.0.1
-        version: 1.0.1
-      next:
-        specifier: 15.2.1
-        version: 15.2.1(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: catalog:react18
-        version: 18.3.1
-      react-dom:
-        specifier: catalog:react18
-        version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@next/eslint-plugin-next':
-        specifier: 15.2.1
-        version: 15.2.1
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-      '@types/eslint':
-        specifier: 'catalog:'
-        version: 8.56.2
-      '@types/node':
-        specifier: 'catalog:'
-        version: 20.11.6
-      '@types/react':
-        specifier: catalog:react18
-        version: 18.3.11
-      '@types/react-dom':
-        specifier: catalog:react18
-        version: 18.3.1
-      autoprefixer:
-        specifier: ^10
-        version: 10.4.19(postcss@8.4.38)
-      eslint:
-        specifier: 'catalog:'
-        version: 8.57.0
-      postcss:
-        specifier: ^8
-        version: 8.4.38
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 3.4.13
-      typescript:
-        specifier: 'catalog:'
-        version: 5.6.3
-
   packages/eslint-config:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
@@ -296,12 +296,21 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      embla-carousel-react:
+        specifier: ^8.5.2
+        version: 8.5.2(react@18.3.1)
+      framer-motion:
+        specifier: ^12.5.0
+        version: 12.5.0(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
         specifier: 'catalog:'
         version: 0.451.0(react@18.3.1)
       next:
         specifier: ^15
         version: 15.2.1(@babel/core@7.24.7)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@18.3.1))(react@18.3.1)
+      react-use-measure:
+        specifier: ^2.1.7
+        version: 2.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -5554,6 +5563,19 @@ packages:
   elliptic@6.6.1:
     resolution: {integrity: sha512-RaddvvMatK2LJHqFJ+YA4WysVN5Ita9E35botqIYspQ4TkRAlCicdzKOjlyv/1Za5RyTNn7di//eEV0uTAfe3g==}
 
+  embla-carousel-react@8.5.2:
+    resolution: {integrity: sha512-Tmx+uY3MqseIGdwp0ScyUuxpBgx5jX1f7od4Cm5mDwg/dptEiTKf9xp6tw0lZN2VA9JbnVMl/aikmbc53c6QFA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
+
+  embla-carousel-reactive-utils@8.5.2:
+    resolution: {integrity: sha512-QC8/hYSK/pEmqEdU1IO5O+XNc/Ptmmq7uCB44vKplgLKhB/l0+yvYx0+Cv0sF6Ena8Srld5vUErZkT+yTahtDg==}
+    peerDependencies:
+      embla-carousel: 8.5.2
+
+  embla-carousel@8.5.2:
+    resolution: {integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==}
+
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
     engines: {node: '>=12'}
@@ -6185,6 +6207,20 @@ packages:
   fractional-indexing@3.2.0:
     resolution: {integrity: sha512-PcOxmqwYCW7O2ovKRU8OoQQj2yqTfEB/yeTYk4gPid6dN5ODRfU1hXd9tTVZzax/0NkO7AxpHykvZnT1aYp/BQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
+
+  framer-motion@12.5.0:
+    resolution: {integrity: sha512-buPlioFbH9/W7rDzYh1C09AuZHAk2D1xTA1BlounJ2Rb9aRg84OXexP0GLd+R83v0khURdMX7b5MKnGTaSg5iA==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
@@ -7801,6 +7837,12 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  motion-dom@12.5.0:
+    resolution: {integrity: sha512-uH2PETDh7m+Hjd1UQQ56yHqwn83SAwNjimNPE/kC+Kds0t4Yh7+29rfo5wezVFpPOv57U4IuWved5d1x0kNhbQ==}
+
+  motion-utils@12.5.0:
+    resolution: {integrity: sha512-+hFFzvimn0sBMP9iPxBa9OtRX35ZQ3py0UHnb8U29VD+d8lQ8zH3dTygJWqK7av2v6yhg7scj9iZuvTS0f4+SA==}
+
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
     engines: {node: '>=10'}
@@ -8823,6 +8865,15 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
+
+  react-use-measure@2.1.7:
+    resolution: {integrity: sha512-KrvcAo13I/60HpwGO5jpW7E9DfusKyLPLvuHlUyP5zqnmAPhNc6qTRjUQrdTADl0lpPpDVU2/Gg51UlOGHXbdg==}
+    peerDependencies:
+      react: '>=16.13'
+      react-dom: '>=16.13'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
 
   react-window@1.8.10:
     resolution: {integrity: sha512-Y0Cx+dnU6NLa5/EvoHukUD0BklJ8qITCtVEPY1C/nL8wwoZ0b5aEw8Ff1dOVHw7fCzMt55XfJDd8S8W8LCaUCg==}
@@ -17297,6 +17348,18 @@ snapshots:
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
 
+  embla-carousel-react@8.5.2(react@18.3.1):
+    dependencies:
+      embla-carousel: 8.5.2
+      embla-carousel-reactive-utils: 8.5.2(embla-carousel@8.5.2)
+      react: 18.3.1
+
+  embla-carousel-reactive-utils@8.5.2(embla-carousel@8.5.2):
+    dependencies:
+      embla-carousel: 8.5.2
+
+  embla-carousel@8.5.2: {}
+
   emittery@0.13.1: {}
 
   emoji-regex@10.4.0: {}
@@ -18273,6 +18336,16 @@ snapshots:
   fraction.js@4.3.7: {}
 
   fractional-indexing@3.2.0: {}
+
+  framer-motion@12.5.0(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      motion-dom: 12.5.0
+      motion-utils: 12.5.0
+      tslib: 2.8.1
+    optionalDependencies:
+      '@emotion/is-prop-valid': 1.2.2
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   fresh@0.5.2: {}
 
@@ -20171,6 +20244,12 @@ snapshots:
 
   mkdirp@3.0.1: {}
 
+  motion-dom@12.5.0:
+    dependencies:
+      motion-utils: 12.5.0
+
+  motion-utils@12.5.0: {}
+
   mrmime@2.0.1: {}
 
   ms@2.1.2: {}
@@ -21340,6 +21419,12 @@ snapshots:
       loose-envify: 1.4.0
       prop-types: 15.8.1
       react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  react-use-measure@2.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+    optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
 
   react-window@1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):

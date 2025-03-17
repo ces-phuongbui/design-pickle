@@ -1,10 +1,5 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Navbar } from "../Navbar";
-import { StrapiImage } from "../Media";
-import { ListItem } from "../ListItem";
-import { Button } from "../ui/button";
-import { ModeToggle } from "../mode-toggle";
 
 describe("Navbar Component", () => {
   const mockNavBar = {

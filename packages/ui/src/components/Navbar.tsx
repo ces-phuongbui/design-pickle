@@ -11,14 +11,13 @@ import {
 
 import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
-import { StrapiImage } from "./Media";
+import { StrapiImage } from "./StrapiImage";
 import { ListItem } from "./ListItem";
 import { cn } from "../lib/utils";
 import Link from "next/link";
 
 export const Navbar = ({ navBar }: { navBar: any }) => {
   const [isMounted, setIsMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { logo, navItems, cta } = navBar;
 
   useEffect(() => {
@@ -33,7 +32,7 @@ export const Navbar = ({ navBar }: { navBar: any }) => {
         <NavigationMenuList className="container flex justify-between px-4 w-screen h-14">
           <NavigationMenuItem className="flex">
             <a rel="noreferrer noopener" href="/">
-              <StrapiImage alt="logo" src={logo.url} width={200} height={100} />
+              <StrapiImage alt="logo" src={logo.url} width={100} height={50} />
             </a>
           </NavigationMenuItem>
 

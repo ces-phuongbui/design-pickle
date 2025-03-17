@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_starts",
+  "info": {
+    "displayName": "Stat",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-stat"
+    }
+  }
+}
