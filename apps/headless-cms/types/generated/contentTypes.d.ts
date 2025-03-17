@@ -384,17 +384,15 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<"shared.seo", false>;
-    favicon: Schema.Attribute.Media<"images" | "files" | "videos">;
+    footer: Schema.Attribute.Component<"layout.footer", false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       "oneToMany",
       "api::global.global"
     > &
       Schema.Attribute.Private;
+    navBar: Schema.Attribute.Component<"layout.nav-bar", false>;
     publishedAt: Schema.Attribute.DateTime;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
       Schema.Attribute.Private;

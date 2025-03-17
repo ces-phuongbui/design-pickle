@@ -12,24 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "siteName": {
-      "type": "string",
-      "required": true
-    },
-    "favicon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
-    },
-    "siteDescription": {
-      "type": "text",
-      "required": true
-    },
-    "defaultSeo": {
+    "navBar": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo"
+      "component": "layout.nav-bar"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.footer"
     }
   }
 }
