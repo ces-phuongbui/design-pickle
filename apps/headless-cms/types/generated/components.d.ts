@@ -1,5 +1,81 @@
 import type { Schema, Struct } from "@strapi/strapi";
 
+export interface ElementsItem extends Struct.ComponentSchema {
+  collectionName: "components_elements_items";
+  info: {
+    description: "";
+    displayName: "Item";
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    link: Schema.Attribute.Component<"elements.link", false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsLink extends Struct.ComponentSchema {
+  collectionName: "components_elements_links";
+  info: {
+    displayName: "Link";
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean;
+    isPrimary: Schema.Attribute.Boolean;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsMenuCategory extends Struct.ComponentSchema {
+  collectionName: "components_elements_menu_categories";
+  info: {
+    description: "";
+    displayName: "Menu Category";
+  };
+  attributes: {
+    items: Schema.Attribute.Component<"elements.item", true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsMenuItem extends Struct.ComponentSchema {
+  collectionName: "components_elements_menu_items";
+  info: {
+    displayName: "Menu Item";
+  };
+  attributes: {
+    menuItems: Schema.Attribute.Component<"elements.menu-category", true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooter extends Struct.ComponentSchema {
+  collectionName: "components_layout_footers";
+  info: {
+    description: "";
+    displayName: "Footer";
+  };
+  attributes: {
+    footerItems: Schema.Attribute.Component<"elements.menu-category", true>;
+    legalLinks: Schema.Attribute.Component<"elements.link", true>;
+    socialLinks: Schema.Attribute.Component<"elements.link", true>;
+  };
+}
+
+export interface LayoutNavBar extends Struct.ComponentSchema {
+  collectionName: "components_layout_nav_bars";
+  info: {
+    description: "";
+    displayName: "Navbar";
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<"elements.link", true>;
+    logo: Schema.Attribute.Media<"images" | "files" | "videos" | "audios">;
+    navItems: Schema.Attribute.Component<"elements.menu-item", true>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: "components_shared_media";
   info: {
@@ -65,6 +141,12 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module "@strapi/strapi" {
   export module Public {
     export interface ComponentSchemas {
+      "elements.item": ElementsItem;
+      "elements.link": ElementsLink;
+      "elements.menu-category": ElementsMenuCategory;
+      "elements.menu-item": ElementsMenuItem;
+      "layout.footer": LayoutFooter;
+      "layout.nav-bar": LayoutNavBar;
       "shared.media": SharedMedia;
       "shared.quote": SharedQuote;
       "shared.rich-text": SharedRichText;
