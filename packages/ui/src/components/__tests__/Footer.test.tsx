@@ -85,7 +85,7 @@ describe("Footer Component", () => {
   };
 
   it("renders footer items correctly", () => {
-    render(<Footer footer={...mockFooter} />);
+    render(<Footer footer={mockFooter} />);
 
     expect(screen.getByText("Solutions")).toBeInTheDocument();
     expect(screen.getByText("UI/UX design")).toBeInTheDocument();
