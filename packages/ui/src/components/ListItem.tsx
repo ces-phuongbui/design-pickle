@@ -16,18 +16,19 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
           <a
             ref={ref}
             className={cn(
-              "flex items-start gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "flex items-start gap-3 min-h-[80px] select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className,
             )}
             {...props}
           >
             {imageSrc && (
-              <div className="w-15 h-13 flex items-center justify-center rounded-md bg-muted">
+              <div className="flex items-center justify-center rounded-md bg-muted">
                 <StrapiImage
                   alt="logo"
                   src={imageSrc}
-                  width={100}
-                  height={100}
+                  width={150}
+                  height={150}
+                  className="w-full h-full object-cover"
                 />
               </div>
             )}

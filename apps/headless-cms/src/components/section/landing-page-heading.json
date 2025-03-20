@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_landing_page_headings",
+  "info": {
+    "displayName": "Landing Page Heading"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.introduce-header"
+    },
+    "headingImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -70,3 +70,42 @@ export async function getGraphicPageData(): Promise<any> {
   });
   return graphicPage;
 }
+
+export async function getLandingPageData(): Promise<any> {
+  const landingPage = await client.single("landing-page").find({
+    populate: {
+      blocks: {
+        on: {
+          "section.landing-page-heading": {
+            populate: {
+              heading: {
+                populate: "*",
+              },
+              headingImages: {
+                populate: "*",
+              },
+            },
+          },
+          "section.social-carousel": {
+            populate: {
+              logos: {
+                populate: {
+                  image: {
+                    fields: ["url", "alternativeText", "name"],
+                  },
+                },
+              },
+            },
+          },
+          "section.start": {
+            populate: "*",
+          },
+          "section.faq": {
+            populate: "*",
+          },
+        },
+      },
+    },
+  });
+  return landingPage;
+}

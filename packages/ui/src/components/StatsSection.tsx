@@ -3,9 +3,8 @@ import { StatCard } from "./ui/stat-card";
 import { Stat } from "../types";
 
 const StatsSection = ({ title, subTitle, cards }: Stat) => {
-  console.log("stat: ", title, subTitle, cards);
   return (
-    <section className="bg-black py-16 md:py-24">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">

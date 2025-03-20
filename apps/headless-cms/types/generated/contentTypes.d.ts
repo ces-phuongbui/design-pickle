@@ -435,6 +435,42 @@ export interface ApiGraphicDesignGraphicDesign extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
+  collectionName: "landing_pages";
+  info: {
+    description: "";
+    displayName: "Landing Page";
+    pluralName: "landing-pages";
+    singularName: "landing-page";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        "section.landing-page-heading",
+        "section.social-carousel",
+        "section.start",
+        "section.faq",
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      "oneToMany",
+      "api::landing-page.landing-page"
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: "strapi_releases";
@@ -946,6 +982,7 @@ declare module "@strapi/strapi" {
       "admin::user": AdminUser;
       "api::global.global": ApiGlobalGlobal;
       "api::graphic-design.graphic-design": ApiGraphicDesignGraphicDesign;
+      "api::landing-page.landing-page": ApiLandingPageLandingPage;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
       "plugin::i18n.locale": PluginI18NLocale;

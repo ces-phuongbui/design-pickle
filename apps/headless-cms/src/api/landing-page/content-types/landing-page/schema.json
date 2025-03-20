@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "section.landing-page-heading",
+        "section.social-carousel",
+        "section.start",
+        "section.faq"
+      ]
+    }
+  }
+}

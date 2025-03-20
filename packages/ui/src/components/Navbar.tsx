@@ -87,7 +87,6 @@ export const Navbar = ({ navBar }: { navBar: NavBarProps }) => {
   const [isMounted, setIsMounted] = useState(false);
   const { logo, navItems, cta } = navBar;
   const [isOpen, setIsOpen] = useState(false);
-  console.log("🚀 ~ Navbar ~ logo:", logo);
 
   useEffect(() => {
     setIsMounted(true);
@@ -201,7 +200,7 @@ export const Navbar = ({ navBar }: { navBar: NavBarProps }) => {
                         navItem.menuItems.map((menuItem: any) => (
                           <li key={menuItem.id} className="space-y-2">
                             <span className="ml-3 text-sm">
-                              {String(menuItem.title)}
+                              {menuItem.title || ""}
                             </span>
                             <ul className="space-y-2">
                               {menuItem.items.map((item: any) => {

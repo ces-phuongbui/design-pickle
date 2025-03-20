@@ -29,6 +29,7 @@ export type ICarouselItem = {
 };
 
 export type CardFeature = {
+  id: number;
   title: string;
   cta: IButton;
   backgroundImage: Image;
@@ -45,7 +46,9 @@ export type ComponentType =
   | "section.introduce-header"
   | "section.social-carousel"
   | "section.features"
-  | "section.start";
+  | "section.start"
+  | "section.landing-page-heading"
+  | "section.faq";
 
 interface Base<T extends ComponentType, D extends {} = {}> {
   __component: T;
@@ -62,7 +65,13 @@ export interface NavLink {
   isPrimary: boolean;
 }
 
-export type Block = IntroduceHeader | SocialCarousel | Features | Stat;
+export type Block =
+  | IntroduceHeader
+  | SocialCarousel
+  | Features
+  | Stat
+  | LandingPageHeader
+  | IFAQ;
 
 export interface IntroduceHeader extends Base<"section.introduce-header"> {
   title: string;
@@ -85,4 +94,33 @@ export interface Stat extends Base<"section.start"> {
   title: string;
   subTitle: string;
   cards: CardStat[];
+}
+
+export interface LandingPageHeader
+  extends Base<"section.landing-page-heading"> {
+  heading: {
+    title: string;
+    description: string;
+    button: IButton;
+  };
+  headingImages: {
+    id: number;
+    url: string;
+  }[];
+}
+
+export interface IFAQ extends Base<"section.faq"> {
+  title: string;
+  cta: {
+    id: number;
+    href: string;
+    text: string;
+    isPrimary: boolean;
+    isExternal: boolean;
+  };
+  faqs: {
+    id: number;
+    question: string;
+    answer: any;
+  }[];
 }

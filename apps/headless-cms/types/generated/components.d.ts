@@ -1,5 +1,16 @@
 import type { Schema, Struct } from "@strapi/strapi";
 
+export interface ElementsFaq extends Struct.ComponentSchema {
+  collectionName: "components_elements_faqs";
+  info: {
+    displayName: "faq";
+  };
+  attributes: {
+    answer: Schema.Attribute.Blocks;
+    question: Schema.Attribute.Text;
+  };
+}
+
 export interface ElementsItem extends Struct.ComponentSchema {
   collectionName: "components_elements_items";
   info: {
@@ -89,6 +100,19 @@ export interface LayoutNavBar extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionFaq extends Struct.ComponentSchema {
+  collectionName: "components_section_faqs";
+  info: {
+    description: "";
+    displayName: "FAQ";
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<"elements.link", false>;
+    faqs: Schema.Attribute.Component<"elements.faq", true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionFeatures extends Struct.ComponentSchema {
   collectionName: "components_section_features";
   info: {
@@ -104,6 +128,7 @@ export interface SectionFeatures extends Struct.ComponentSchema {
 export interface SectionIntroduceHeader extends Struct.ComponentSchema {
   collectionName: "components_section_introduce_headers";
   info: {
+    description: "";
     displayName: "introduce-header";
     icon: "message";
   };
@@ -111,6 +136,20 @@ export interface SectionIntroduceHeader extends Struct.ComponentSchema {
     button: Schema.Attribute.Component<"shared.button", false>;
     description: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionLandingPageHeading extends Struct.ComponentSchema {
+  collectionName: "components_section_landing_page_headings";
+  info: {
+    displayName: "Landing Page Heading";
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<"section.introduce-header", false>;
+    headingImages: Schema.Attribute.Media<
+      "images" | "files" | "videos" | "audios",
+      true
+    >;
   };
 }
 
@@ -263,6 +302,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module "@strapi/strapi" {
   export module Public {
     export interface ComponentSchemas {
+      "elements.faq": ElementsFaq;
       "elements.item": ElementsItem;
       "elements.link": ElementsLink;
       "elements.menu-category": ElementsMenuCategory;
@@ -270,8 +310,10 @@ declare module "@strapi/strapi" {
       "elements.social-logo": ElementsSocialLogo;
       "layout.footer": LayoutFooter;
       "layout.nav-bar": LayoutNavBar;
+      "section.faq": SectionFaq;
       "section.features": SectionFeatures;
       "section.introduce-header": SectionIntroduceHeader;
+      "section.landing-page-heading": SectionLandingPageHeading;
       "section.social-carousel": SectionSocialCarousel;
       "section.start": SectionStart;
       "shared.button": SharedButton;

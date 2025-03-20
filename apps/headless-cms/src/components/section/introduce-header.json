@@ -2,7 +2,8 @@
   "collectionName": "components_section_introduce_headers",
   "info": {
     "displayName": "introduce-header",
-    "icon": "message"
+    "icon": "message",
+    "description": ""
   },
   "options": {},
   "attributes": {
