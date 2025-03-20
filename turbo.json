@@ -18,8 +18,5 @@
       "cache": false,
       "persistent": true
     }
-  },
-  "globalEnv":[
-      "STRAPI_URL"
-  ]
+  }
 }

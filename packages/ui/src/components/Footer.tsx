@@ -84,6 +84,7 @@ export const Footer = ({ footer }: { footer: FooterProps }) => {
                 className="text-muted-foreground hover:text-foreground"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={link.text}
               >
                 {renderIcon(link.text.toLowerCase())}
               </Link>
