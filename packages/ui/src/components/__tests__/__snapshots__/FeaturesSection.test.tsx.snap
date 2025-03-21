@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturesSection renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="bg-black py-16"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <div
+        class="mb-12 text-center"
+      >
+        <h2
+          class="mb-4 text-4xl font-bold text-white"
+        >
+          Our Amazing Features
+        </h2>
+        <p
+          class="text-sm text-gray-400"
+        >
+          Explore what makes us unique
+        </p>
+      </div>
+      <div
+        class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <img
+              alt="Feature 1"
+              class="h-full w-full object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=828&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=828&q=75 2x"
+              style="color: transparent;"
+              width="400"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 1
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the first feature. It's awesome!
+              </p>
+              <a
+                href="/feature1"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Learn More
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <img
+              alt="Feature 2"
+              class="h-full w-full object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=828&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=828&q=75 2x"
+              style="color: transparent;"
+              width="400"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 2
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the second feature. It's even better!
+              </p>
+              <a
+                href="/feature2"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Get Started
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-600/50 to-teal-900/90"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 3
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the third feature. It's the best!
+              </p>
+              <a
+                href="/feature3"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Discover
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`FeaturesSection renders correctly with all props 1`] = `
+<div>
+  <section
+    class="bg-black py-16"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <div
+        class="mb-12 text-center"
+      >
+        <h2
+          class="mb-4 text-4xl font-bold text-white"
+        >
+          Our Amazing Features
+        </h2>
+        <p
+          class="text-sm text-gray-400"
+        >
+          Explore what makes us unique
+        </p>
+      </div>
+      <div
+        class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <img
+              alt="Feature 1"
+              class="h-full w-full object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=828&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage1.jpg&w=828&q=75 2x"
+              style="color: transparent;"
+              width="400"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 1
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the first feature. It's awesome!
+              </p>
+              <a
+                href="/feature1"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Learn More
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <img
+              alt="Feature 2"
+              class="h-full w-full object-cover"
+              data-nimg="1"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=828&q=75"
+              srcset="/_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fexample.com%2Fimage2.jpg&w=828&q=75 2x"
+              style="color: transparent;"
+              width="400"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 2
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the second feature. It's even better!
+              </p>
+              <a
+                href="/feature2"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Get Started
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-600/50 to-teal-900/90"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 3
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is the third feature. It's the best!
+              </p>
+              <a
+                href="/feature3"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Discover
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`FeaturesSection renders correctly without background images 1`] = `
+<div>
+  <section
+    class="bg-black py-16"
+  >
+    <div
+      class="container mx-auto px-4"
+    >
+      <div
+        class="mb-12 text-center"
+      >
+        <h2
+          class="mb-4 text-4xl font-bold text-white"
+        >
+          Our Amazing Features
+        </h2>
+        <p
+          class="text-sm text-gray-400"
+        >
+          Explore what makes us unique
+        </p>
+      </div>
+      <div
+        class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="relative h-[600px] overflow-hidden rounded-lg bg-gradient-to-b from-purple-600 to-teal-500 p-6 text-white"
+          data-testid="feature-card"
+        >
+          <div
+            class="absolute inset-0 z-0"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-600/50 to-teal-900/90"
+            />
+          </div>
+          <div
+            class="relative z-10 flex h-full flex-col justify-between"
+          >
+            <h3
+              class="text-3xl font-bold"
+            >
+              Feature 1
+            </h3>
+            <div
+              class="space-y-4"
+            >
+              <p
+                class="text-xl text-gray-100 mb-5"
+              >
+                This is feature 1
+              </p>
+              <a
+                href="/feature1"
+              >
+                <button
+                  class="inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background underline-offset-4 h-10 group text-white hover:no-underline bg-white bg-opacity-20 p-4"
+                >
+                  Learn More
+                   
+                  <span
+                    class="ml-2 transition-transform group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

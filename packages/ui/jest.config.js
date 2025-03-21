@@ -30,4 +30,5 @@ module.exports = {
     "!src/**/*.stories.{ts,tsx}",
     "!src/index.ts",
   ],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
 };

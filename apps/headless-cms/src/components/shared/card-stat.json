@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_card_stats",
+  "info": {
+    "displayName": "card-stat",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "subLabel": {
+      "type": "string"
+    }
+  }
+}

@@ -10,7 +10,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "ui": "pnpm --filter @repo/ui ui",
-    "seed": "cd apps/headless-cms && npm run strapi import -- -f ./seed-data.tar.gz --force"
+    "seed": "cd apps/headless-cms && npm run strapi import -- -f ./seed-data.tar.gz"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

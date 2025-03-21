@@ -15,22 +15,30 @@ export function StrapiImage({
   ...rest
 }: Readonly<StrapiImageProps>) {
   const imageUrl = getStrapiMedia(src);
-  console.log("🚀 ~ imageUrl:", imageUrl);
-  if (!imageUrl) return null;
+
+  if (!imageUrl) {
+    return null;
+  }
 
   return (
     <Image
       src={imageUrl}
-      alt={alt || "No alt text provided."}
+      alt={alt ?? "No alt text provided."}
       className={className}
       {...rest}
     />
   );
 }
 
-export function getStrapiMedia(url: string | null) {
-  if (url == null) return null;
-  if (url.startsWith("data:")) return url;
-  if (url.startsWith("http") || url.startsWith("//")) return url;
-  return getStrapiURL() + url;
+export function getStrapiMedia(url: string | null): string | null {
+  if (!url) {
+    return null;
+  }
+
+  // Check if URL is already absolute or data URL
+  if (/^(data:|http|\/\/)/.test(url)) {
+    return url;
+  }
+
+  return `${getStrapiURL()}${url}`;
 }

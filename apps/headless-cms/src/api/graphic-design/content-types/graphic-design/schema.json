@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "graphic_designs",
+  "info": {
+    "singularName": "graphic-design",
+    "pluralName": "graphic-designs",
+    "displayName": "Graphic Design",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "section.introduce-header",
+        "section.features",
+        "section.social-carousel",
+        "section.start"
+      ]
+    }
+  }
+}

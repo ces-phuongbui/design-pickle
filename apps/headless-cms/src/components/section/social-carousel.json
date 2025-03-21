@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_social_carousels",
+  "info": {
+    "displayName": "SocialCarousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.social-logo"
+    },
+    "bannerImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
