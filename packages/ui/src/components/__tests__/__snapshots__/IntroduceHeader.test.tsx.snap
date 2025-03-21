@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IntroduceHeader renders correctly and matches snapshot 1`] = `
+<div>
+  <section
+    class="relative w-full bg-black text-white m-auto"
+  >
+    <div
+      class="container mx-auto px-4 py-16 md:py-24"
+    >
+      <div
+        class="mx-auto flex "
+      >
+        <h1
+          class="mb-6 text-4xl max-w-xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl"
+        >
+          Welcome to Our Platform
+        </h1>
+        <div
+          class="w-2/4"
+        >
+          <p
+            class="mb-8 text-lg text-gray-300 md:text-xl max-w-[80%]"
+          >
+            This is a description of our platform.
+          </p>
+          <a
+            href="/get-started"
+          >
+            <button
+              class="inline-flex items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background shadow hover:bg-primary/90 h-10 py-2 px-4 text-base font-medium bg-[\`\${button.color}\`] text-black"
+              style="background-color: rgb(255, 0, 0);"
+            >
+              Get Started
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

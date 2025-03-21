@@ -11,7 +11,7 @@ import {
 
 import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
-import { StrapiImage } from "./Media";
+import { StrapiImage } from "./StrapiImage";
 import { ListItem } from "./ListItem";
 import { cn } from "../lib/utils";
 import Link from "next/link";
@@ -85,8 +85,8 @@ export type NavBarProps = {
 
 export const Navbar = ({ navBar }: { navBar: NavBarProps }) => {
   const [isMounted, setIsMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { logo, navItems, cta } = navBar;
+  const [isOpen, setIsOpen] = useState(false);
   console.log("🚀 ~ Navbar ~ logo:", logo);
 
   useEffect(() => {
